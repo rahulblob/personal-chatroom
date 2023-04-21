@@ -68,7 +68,7 @@ socket.on('user-joined', name => {
 socket.on('receive', data => {
     append(`${data.name}: ${data.message}`, 'left')
     messageContainer.scroll({
-  top: 1000000,
+  top: 1000000000,
   left: 0,
   behavior: "smooth",
 });
@@ -86,6 +86,11 @@ form.addEventListener('submit', (e) => {
     append(`${message}`, 'right');
     socket.emit('send', message);
     messageInput.value = '';
+     messageContainer.scroll({
+  top: 1000000000,
+  left: 0,
+  behavior: "smooth",
+});
 })
 
 const coseNtf = document.querySelector('.coseNtf');
