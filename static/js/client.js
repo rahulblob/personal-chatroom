@@ -1,0 +1,126 @@
+const socket = io('https://ge-chat.onrender.com');
+
+// Get DOM elements in respective Js variables
+const form = document.getElementById('send-container');
+const messageInput = document.getElementById('messageInp')
+const messageContainer = document.querySelector(".container")
+
+// Audio that will play on receiving messages
+var audio = new Audio('alert.mp3');
+
+// Function which will append event info to the contaner
+const append = (message, position) => {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = message;
+    messageElement.classList.add('message');
+    messageElement.classList.add(position);
+    messageContainer.append(messageElement);
+    if (position == 'left') {
+        audio.play();
+    }
+}
+
+
+const popup = document.querySelector('.popup');
+const userNameInput = document.querySelector('.setUsername');
+const setUsernameButton = document.querySelector('.setUsernameBtn');
+
+//getname() function
+// function getname() {
+//     //taking input
+//     //if input is not null
+//     if ((userNameInput != null)) {
+//         //removing extra whitespaces
+//         const tempname = userNameInput.trim();
+//         //if input is greater than 5
+//         if ((tempname.length) >= 4) {
+//             if ((tempname.length) > 20) {
+//                 //trim tempname to 20 charecters and save it to name
+//                 name = (tempname.substring(0, 20));
+//             } else {
+//                 //name is < 20
+//                 name = tempname;
+//             }
+//             popup.style.display = 'none';
+//             socket.emit('new-user-joined', name);
+//         } else {
+//             alert("username must be atleat 4 characters or greater than 4");
+//             userNameInput.style.borderColor = 'red';
+//         }
+//     } else {
+//         //retry if input is null
+//         getname();
+//     }
+// }
+// //calling getname() function
+// getname()
+
+let name = '';
+const getname = () => {
+    if (userNameInput.value != null && userNameInput.value.length > 4) {
+        let name = userNameInput.value;
+        setUsernameButton.innerHTML = `Please Wait<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>`;
+        localStorage.setItem('username', name);
+        setInterval(() => {
+            popup.style.display = 'none';
+            socket.emit('new-user-joined', name);
+        }, 2000);
+    }
+    else {
+        alert("invalid name");
+        userNameInput.style.borderColor = 'red';
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('username')) {
+        popup.style.display = 'grid';
+    }
+    else {
+        let name = localStorage.getItem('username');
+        socket.emit('new-user-joined', name);
+        popup.style.display = 'none';
+    }
+});
+setUsernameButton.addEventListener('click', () => {
+    getname();
+});
+
+
+
+
+
+// If a new user joins, receive his/her name from the server
+socket.on('user-joined', name => {
+    append(`${name} joined the chat`, 'left')
+})
+
+// If server sends a message, receive it
+socket.on('receive', data => {
+    append(`${data.name}: ${data.message}`, 'left')
+})
+
+// If a user leaves the chat, append the info to the container
+socket.on('left', name => {
+    append(`${name} left the chat`, 'left')
+})
+
+// If the form gets submitted, send server the message
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const message = messageInput.value;
+    append(`${message}`, 'right');
+    socket.emit('send', message);
+    messageInput.value = '';
+})
+
+const coseNtf = document.querySelector('.coseNtf');
+const ntf = document.querySelector('.notif');
+coseNtf.addEventListener('click', () => {
+    ntf.style.opacity = '0';
+    setTimeout(() => {
+        ntf.style.visibility = 'hidden';
+    }, 1000);
+    setTimeout(() => {
+        ntf.style.display = 'none';
+    }, 500);
+});
