@@ -34,7 +34,7 @@ const getname = () => {
         setTimeout(() => {
             popup.style.display = 'none';
             socket.emit('new-user-joined', name);
-        }, 2000);
+        }, 1000);
     }
     else {
         alert("invalid name");
