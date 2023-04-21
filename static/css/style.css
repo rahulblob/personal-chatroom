@@ -134,6 +134,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     transition: all .3s ease;
+    color:#242424;
 }
 
 .notif .coseNtf {
