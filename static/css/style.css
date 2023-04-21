@@ -124,8 +124,8 @@ h1 {
     height: 100%;
     width: 100%;
     background: #e4e4e4;
-    display:grid;
-    grid-template-columns:auto;
+    display:flex;
+    flex-direction:column;
 }
 
 .notif {
