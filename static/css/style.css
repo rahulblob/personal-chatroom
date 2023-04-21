@@ -54,7 +54,7 @@ h1 {
 .right {
     float: right;
     clear: both;
-    border-radius: 8px 0px 8px 8px;
+    border-radius: 8px 8px 8px 0px;
     background: #545796;
 }
 
