@@ -36,7 +36,7 @@ h1 {
 .message {
     background: #3d4197;
     padding: 10px 15px;
-    margin: 7px;
+    margin: 5px;
     border-radius: 0 8px 8px 8px;
     max-width: 220px;
     overflow-x:scroll;
