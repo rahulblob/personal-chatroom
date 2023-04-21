@@ -38,7 +38,7 @@ h1 {
     padding: 10px 15px;
     margin: 7px;
     border-radius: 0 8px 8px 8px;
-    width: 100%;
+    max-width: 220px;
     overflow-x:scroll;
     min-height: fit-content;
     color: #fffdfc;
