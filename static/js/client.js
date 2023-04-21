@@ -67,6 +67,7 @@ socket.on('user-joined', name => {
 // If server sends a message, receive it
 socket.on('receive', data => {
     append(`${data.name}: ${data.message}`, 'left')
+    window.scrollTo(0, 999999999);
 })
 
 // If a user leaves the chat, append the info to the container
@@ -80,7 +81,6 @@ form.addEventListener('submit', (e) => {
     const message = messageInput.value;
     append(`${message}`, 'right');
     socket.emit('send', message);
-    window.scrollTo(0, 999999999);
     messageInput.value = '';
 })
 
