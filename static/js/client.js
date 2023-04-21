@@ -25,36 +25,6 @@ const popup = document.querySelector('.popup');
 const userNameInput = document.querySelector('.setUsername');
 const setUsernameButton = document.querySelector('.setUsernameBtn');
 
-//getname() function
-// function getname() {
-//     //taking input
-//     //if input is not null
-//     if ((userNameInput != null)) {
-//         //removing extra whitespaces
-//         const tempname = userNameInput.trim();
-//         //if input is greater than 5
-//         if ((tempname.length) >= 4) {
-//             if ((tempname.length) > 20) {
-//                 //trim tempname to 20 charecters and save it to name
-//                 name = (tempname.substring(0, 20));
-//             } else {
-//                 //name is < 20
-//                 name = tempname;
-//             }
-//             popup.style.display = 'none';
-//             socket.emit('new-user-joined', name);
-//         } else {
-//             alert("username must be atleat 4 characters or greater than 4");
-//             userNameInput.style.borderColor = 'red';
-//         }
-//     } else {
-//         //retry if input is null
-//         getname();
-//     }
-// }
-// //calling getname() function
-// getname()
-
 let name = '';
 const getname = () => {
     if (userNameInput.value != null && userNameInput.value.length > 4) {
@@ -110,6 +80,7 @@ form.addEventListener('submit', (e) => {
     const message = messageInput.value;
     append(`${message}`, 'right');
     socket.emit('send', message);
+    window.scrollTo(0, 999999999);
     messageInput.value = '';
 })
 
