@@ -76,7 +76,7 @@ body{
   color:#353535;
 }
 .right{
-  float:right;
+  float:right !important;
   background:var(--accent-1);
   border-radius:10px 10px 0px 10px;
 }
