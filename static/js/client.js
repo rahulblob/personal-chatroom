@@ -44,7 +44,6 @@ const getname = () => {
         userNameInput.style.borderColor = 'red';
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('username')) {
         popup.style.display = 'block';
     }
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         socket.emit('new-user-joined', name);
         popup.style.display = 'none';
     }
-});
+
 setUsernameButton.addEventListener('click', () => {
     getname();
 });
