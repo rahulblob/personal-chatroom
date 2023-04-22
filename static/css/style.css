@@ -212,9 +212,9 @@ body{
   margin-top:20px;
   color:var(--text-1);
 }
-p{
+/*p{
   font-size:95%;
-}
+}*/
 ul{
   padding: 0 20px;
   list-style-type: circle;
