@@ -11,7 +11,7 @@ var audio = new Audio('alert.mp3');
 // Function which will append event info to the contaner
 const append = (message, position) => {
     const messageElement = document.createElement('div');
-    messageElement.innerText = message;
+    messageElement.innerHTML = message;
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
