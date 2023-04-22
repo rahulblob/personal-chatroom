@@ -69,7 +69,7 @@ socket.on('user-joined', name => {
 
 // If server sends a message, receive it
 socket.on('receive', data => {
-    append(`${data.name}: ${data.message}`, 'left')
+    append(`<span class='sendersName'>${data.name}</span> ${data.message}`, 'left')
     messageContainer.scroll({
   top: 1000000000,
   left: 0,
