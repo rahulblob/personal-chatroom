@@ -46,7 +46,7 @@ const getname = () => {
 }
 document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem('username')) {
-        popup.style.display = 'grid';
+        popup.style.display = 'block';
     }
     else {
         let name = localStorage.getItem('username');
