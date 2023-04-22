@@ -68,7 +68,7 @@ body{
   position:absolute;
   bottom:-13px;
   left:2px;
-  font-weight:bold;
+  font-weight:400;
   user-select:none;
 }
 ::selection{
