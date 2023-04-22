@@ -47,7 +47,7 @@ body{
   width:100%;
   overflow-y:scroll;
   background:transparent;
-  display:grid;
+/*   display:grid; */
 }
 .message{
   padding:10px 12px;
@@ -76,9 +76,14 @@ body{
   color:#353535;
 }
 .right{
-  float:right !important;
+  float:right;
+  clear:both;
   background:var(--accent-1);
   border-radius:10px 10px 0px 10px;
+}
+.left {
+    float: left;
+    clear: both;
 }
 .send{
   background:var(--white);
