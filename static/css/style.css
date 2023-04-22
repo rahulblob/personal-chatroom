@@ -146,7 +146,7 @@ body{
   right:0;
   height:100%;
   width:100%;
-  display:block;
+  display:none;
   padding:12px 0;
 }
 .popupInner{
