@@ -27,7 +27,7 @@ h1 {
     /* border-radius: 8px; */
     margin: auto;
     height:100%;
-    max-height: 80vh;
+    max-height: 79vh;
     padding: 10px 5px;
     overflow-y: auto;
     scroll-behavior: auto;
@@ -42,7 +42,7 @@ h1 {
     overflow-x:scroll;
     min-height: fit-content;
     color: #fffdfc;
-    font-size: 17px;
+    font-size: 16px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, .07);
 }
 
