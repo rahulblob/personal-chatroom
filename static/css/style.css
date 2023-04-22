@@ -101,9 +101,9 @@ body{
   border:none;
   border-radius:8px 0px 0px 8px;
   border:1px solid rgba(0,0,0,.3);
-  background:#f1f1f1;
+  background:#fffdfc;
   color:#242424;
-  padding:12px 15px;
+  padding:14px 16px;
   font-size:17px;
   border-right:none;
   transition:border-color .3s;
@@ -134,7 +134,7 @@ body{
 .infoM{
   height:65px;
   background:var(--white);
-  display:inline-flex;
+  display:none;
   align-items:center;
   justify-content:space-between;
   padding:0 20px;
