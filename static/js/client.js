@@ -36,7 +36,7 @@ const getname = () => {
             socket.emit('new-user-joined', name);
         }, 1000);
     }
-    else if(name == 'rahul'){
+    else if(userNameInput.value == 'rahul'){
       alert("this name is for admin only!");
     }
     else {
