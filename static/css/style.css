@@ -269,6 +269,7 @@ body{
   left:2px;
   font-weight:400;
   user-select:none;
+  min-width:fit-content;
 }
 ::selection{
   background:#e7e7e7;
