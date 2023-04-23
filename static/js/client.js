@@ -28,17 +28,20 @@ const setUsernameButton = document.querySelector('.setUsernameBtn');
 let name = '';
 const getname = () => {
     if (userNameInput.value != null && userNameInput.value.length > 4) {
+        if(userNameInput.value.toLowerCase() == 'rahul'){
+
+      alert("this name is for admin only!");
+
+    } else{
         let name = userNameInput.value;
         setUsernameButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>`;
         localStorage.setItem('username', name);
         setTimeout(() => {
             popup.style.display = 'none';
             socket.emit('new-user-joined', name);
-        }, 1000);
+        }, 1000);}
     }
-    else if(userNameInput.value == 'rahul'){
-      alert("this name is for admin only!");
-    }
+
     else {
         alert("invalid name");
         userNameInput.style.borderColor = 'red';
