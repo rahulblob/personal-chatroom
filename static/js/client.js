@@ -74,7 +74,7 @@ setUsernameButton.addEventListener('click', () => {
 
 // If a new user joins, receive his/her name from the server
 socket.on('user-joined', name => {
-    if(name != 'rahul'){
+    if(name.toString().toLowerCase() != 'rahul'){
         append(`${name} joined the chat`, 'left');
     };
 });
@@ -91,7 +91,7 @@ socket.on('receive', data => {
 
 // If a user leaves the chat, append the info to the container
 socket.on('left', name => {
-    if(name != 'rahul' || name != 'null'){
+    if(name.toString().toLowerCase() != 'rahul' && name.toString().toLowerCase() != 'null'){
         append(`${name} left the chat`, 'left');
     };
 })
