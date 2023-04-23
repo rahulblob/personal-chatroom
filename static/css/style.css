@@ -42,7 +42,7 @@ body{
  left:0;
 
  right:0;
-
+  background:var(--white);
   z-index:999;
 
   transition:opacity .3s ease,visibility .3s ease;
