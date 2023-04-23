@@ -20,7 +20,14 @@ const append = (message, position) => {
     }
 }
 
+// preloader
+document.addEventListener("DOMContentLoaded",()=>{
+    document.querySelector(".prel").style.opacity = '0';
+    document.querySelector(".prel").style.visibility = 'hidden';
+});
 
+
+// function to show / hide popup and set username
 const popup = document.querySelector('.popup');
 const userNameInput = document.querySelector('.setUsername');
 const setUsernameButton = document.querySelector('.setUsernameBtn');
@@ -47,6 +54,7 @@ const getname = () => {
         userNameInput.style.borderColor = 'red';
     }
 }
+// if username is already set then hide popup else show
     if (!localStorage.getItem('username')) {
         popup.style.display = 'block';
     }
