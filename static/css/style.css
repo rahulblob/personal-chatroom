@@ -300,16 +300,16 @@ body{
   width:100%;
   border:none;
   border-radius:50px;
-  border:1px solid rgba(0,0,0,.3);
-  background:#f1f1f1;
+  border:1px solid rgba(0,0,0,.0);
+  background:#f0f0f0;
   color:#242424;
-  padding:12px 18px;
+  padding:14px 20px;
   font-size:17px;
   transition:border-color .3s;
 }
 .send form input:focus{
   outline:0;
-  border-color:rgba(0,0,0,.5);
+  border-color:rgba(0,0,0,.1);
   background:#fff;
 }
 .send form button{
@@ -320,7 +320,7 @@ body{
   border-radius: 50%;
   margin-left:10px;
   padding:0 15px;
-  display:inline-flex;
+  display:flex;
   align-items:center;
   justify-content:center;
   transition:opacity .3s;
