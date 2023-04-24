@@ -253,7 +253,7 @@ body{
   background:var(--accent);
   border-radius:0 10px 10px 10px;
   width:fit-content;
-  max-width:220px;
+  max-width:260px;
   margin-bottom:17px;
   color:var(--text);
   font-size:16px;
