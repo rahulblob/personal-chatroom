@@ -257,7 +257,7 @@ body{
   margin-bottom:17px;
   color:var(--text);
   font-size:16px;
-  box-shadow:0px 0px 20px rgba(0,0,0,.06);
+  box-shadow:0px 0px 20px rgba(0,0,0,.07);
   position:relative;
 }
 .sendersName{
