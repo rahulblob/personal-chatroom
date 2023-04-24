@@ -299,13 +299,12 @@ body{
 .send form input{
   width:100%;
   border:none;
-  border-radius:8px 0px 0px 8px;
+  border-radius:50px;
   border:1px solid rgba(0,0,0,.3);
-  background:#fffdfc;
+  background:#f1f1f1;
   color:#242424;
-  padding:14px 16px;
+  padding:12px 18px;
   font-size:17px;
-  border-right:none;
   transition:border-color .3s;
 }
 .send form input:focus{
@@ -318,12 +317,16 @@ body{
   color:var(--text);
   font-size:17px;
   border:none;
-  border-radius: 0px 8px 8px 0px;
-  padding:0 17px;
+  border-radius: 50%;
+  margin-left:10px;
+  padding:0 15px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   transition:opacity .3s;
+}
+.send form button svg{
+  transform:rotate(46deg);
 }
 ::placeholder{
   opacity:.8;
