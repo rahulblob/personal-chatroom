@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="static/vector-chat-icon-png_302635.jpg">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="static/vector-chat-icon-png_302635.jpg">
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="static/vector-chat-icon-png_302635.jpg">
-    <link rel="manifest" href="static/site.webmanifest">
-    <script defer src="https://ge-chat.onrender.com/socket.io/socket.io.js"></script>
-    <script defer src="static/js/client.js"></script>
-    <link rel="stylesheet" href="static/css/style.css">
-    <title>Syntx ChatRoom</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/vector-chat-icon-png_302635.jpg">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="static/vector-chat-icon-png_302635.jpg">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="static/vector-chat-icon-png_302635.jpg">
+  <link rel="manifest" href="static/site.webmanifest">
+  <script defer src="https://ge-chat.onrender.com/socket.io/socket.io.js"></script>
+  <script defer src="static/js/client.js"></script>
+  <link rel="stylesheet" href="static/css/style.css">
+  <title>Syntx ChatRoom</title>
 </head>
 
 <body>
-      <!--[ preloader ]-->
-       <div class="prel">
-  <div class="three-body">
-<div class="three-body__dot"></div>
-<div class="three-body__dot"></div>
-<div class="three-body__dot"></div>
-  </div></div>
-  
-    <div class="main">
-      <!--[ welcome notif ]-->
-      <!--[ verson 1 ]-->
-        <div class="notif"><span>Welcome To Rahul's Private Chat Room</span><span class="coseNtf">&#10005;</span></div>
+  <!--[ preloader ]-->
+  <div class="prel">
+    <div class="three-body">
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+    </div>
+  </div>
 
-      <!--[ verson 2 ]-->
-        <div class='infoM'>
-          <span class='infoMicon'>😎</span>
-          <span>Private Chatroom</span>
-        </div>
-      
-      <!--[ message section ]-->
-        <div class="container">
-        </div>
-      
-      <!--[ send message section ]-->
-        <div class="send">
-            <form action="#" id="send-container">
-                <input type="text" name="messageInp" id="messageInp" required maxlength="200" autocomplete="off" placeholder='message..'>
-                <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-                        <path
-                            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                    </svg></button>
-            </form>
-        </div>
+  <div class="main">
+    <!--[ welcome notif ]-->
+    <!--[ verson 1 ]-->
+    <div class="notif"><span>Welcome To Rahul's Private Chat Room</span><span class="coseNtf">&#10005;</span></div>
+
+    <!--[ verson 2 ]-->
+    <div class='infoM'>
+      <span class='infoMicon'>😎</span>
+      <span>Private Chatroom</span>
     </div>
 
-<!--[ popup ]-->
-    <div class="popup">
-        <div class="popupInner">
-            <label for='gshdj'>Set a username to join.</label>
-          <div class='flex'>
-            <input type="text" id='gshdj' placeholder="Tommy Vercity" class="setUsername" /><br />
-            <button class="setUsernameBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-                    <path
-                        d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-                </svg>
-            </button>
-          </div>
-        </div>
-      <div class='pSgri'>
-        <p>Welcome to PrivateChat, the secure and private web-based chatting app that respects your privacy! With PrivateChat, you can connect and chat with friends, family, and colleagues in real-time without worrying about your data being tracked or monitored.</p>
-        <br/>
-        <p>end to end encripted</p>
-        <ul>
-          <li>We don't save your messages</li>
-          <li>No email or login required</li>
-          <li>Hang out with others!</li>
-        </ul>
+    <!--[ message section ]-->
+    <div class="container">
+    </div>
+
+    <!--[ send message section ]-->
+    <div class="send">
+      <form action="#" id="send-container">
+        <input type="text" name="messageInp" id="messageInp" required maxlength="200" autocomplete="off"
+          placeholder='message..'>
+        <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+            <path
+              d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+          </svg></button>
+      </form>
+    </div>
+  </div>
+
+  <!--[ popup ]-->
+  <div class="popup">
+    <div class="popupInner">
+      <label for='gshdj'>Set a username to join.</label>
+      <div class='flex'>
+        <input type="text" id='gshdj' placeholder="Tommy Vercity" class="setUsername" /><br />
+        <button class="setUsernameBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+          </svg>
+        </button>
       </div>
     </div>
+    <div class='pSgri'>
+      <p>Welcome to PrivateChat, the secure and private web-based chatting app that respects your privacy! With
+        PrivateChat, you can connect and chat with friends, family, and colleagues in real-time without worrying about
+        your data being tracked or monitored.</p>
+      <br />
+      <p>end to end encripted</p>
+      <ul>
+        <li>We don't save your messages</li>
+        <li>No email or login required</li>
+        <li>Hang out with others!</li>
+      </ul>
+    </div>
+  </div>
 
 </body>
+
 </html>
