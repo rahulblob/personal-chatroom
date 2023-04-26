@@ -35,7 +35,7 @@ body {
 
     position: fixed;
 
-    display: none;
+    display: grid;
 
     place-items: center;
 
